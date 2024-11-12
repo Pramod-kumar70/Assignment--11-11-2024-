@@ -17,15 +17,19 @@
 
 @media only screen and (max-width: 600px){
 
+    
+.Section-1_Content{
+    height: 300px;
+}
     .Section-1_Content h1{
         font-size: 40px;
     }
 
     .Section-1_Img {
-        width:350px;
+        width:370px;
     }
 
     .Section-2_Img{
-        width: 350px;
+        width: 370px;
     }
 }
