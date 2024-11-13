@@ -239,54 +239,118 @@
 // "senior" (65+) Return an object with categories as keys and arrays of names as values.
 
 
-const GroupPeople = {
-    Child:[],
-    Teen :[],
-    Adult :[],
-    Senior :[]
-}
+// const GroupPeople = {
+//     Child:[],
+//     Teen :[],
+//     Adult :[],
+//     Senior :[]
+// }
 
 
 
-function getGroupPeople(List ,Size){
-    for(let i=0;i<Size;i++)
-    {
-        if(List[i].Age>0 && List[i].Age<=12)
-            GroupPeople.Child.push(List[i].Name)
-        else if(List[i].Age>=13 && List[i].Age<=19)
-            GroupPeople.Teen.push(List[i].Name)
-        else if(List[i].Age>=20 && List[i].Age<=64)
-            GroupPeople.Adult.push(List[i].Name)
-        else
-        GroupPeople.Senior.push(List[i].Name)
+// function getGroupPeople(List ,Size){
+//     for(let i=0;i<Size;i++)
+//     {
+//         if(List[i].Age>0 && List[i].Age<=12)
+//             GroupPeople.Child.push(List[i].Name)
+//         else if(List[i].Age>=13 && List[i].Age<=19)
+//             GroupPeople.Teen.push(List[i].Name)
+//         else if(List[i].Age>=20 && List[i].Age<=64)
+//             GroupPeople.Adult.push(List[i].Name)
+//         else
+//         GroupPeople.Senior.push(List[i].Name)
+//     }
+//     return GroupPeople;
+// }
+
+
+
+// const PeopleList = [];
+
+// const People1 = {};
+// People1.Name = "Prince";
+// People1.Age = 16;
+
+// const People2 = {};
+// People2.Name = "Raja"
+// People2.Age = 20;
+
+// const People3 = {};
+// People3.Name = "Raman Kumar"
+// People3.Age = 40;
+
+// const People4 = {};
+// People4.Name = "Thakur Durjan Singh"
+// People4.Age = 70
+
+// PeopleList.push(People1 , People2,People3,People4);
+
+// console.log(PeopleList);
+
+// let PeopleDetails =  getGroupPeople(PeopleList,PeopleList.length)
+// console.log(PeopleDetails);
+
+
+// 9 .  Number to word
+
+
+// const Converter = (Num)=>{
+//     if(Num>=0 && Num<=9){
+// switch(Num){
+//     case 0: return 'Zero'
+//     case 1: return 'One'
+//     case 2: return 'Two'
+//     case 3: return 'Three'
+//     case 4: return 'Four'
+//     case 5 : return 'Five'
+//     case 6 :return 'Six'
+//     case 7 :return 'Seven'
+//     case 8 :return 'Eight'
+//     default :return 'Nine'
+// }
+
+// }
+// else
+// return 'Invalid Number'
+// }
+// let Num = 7;
+
+// console.log(Num ,"in word :-> ",
+//     Converter(Num));
+
+// Q no :-> 10
+
+const CheckEligibility = function(Student, MinMark){
+    const EligibleStudents = [];
+
+    for(let i = 0;i<Student.length;i++){
+
+        if(Student[i].MarkPrc>MinMaks)
+            EligibleStudents.push(Student[i])
+
     }
-    return GroupPeople;
+    return EligibleStudents;
+
+
 }
+const Student1 = {}, Student2 = {} , Student3 = {} , StudentList =[];
+
+let MinMaks = 75;
+
+Student1.Name = "Radhe Krishna"
+Student1.Age = 24
+Student1.MarkPrc = 90
 
 
+Student2.Name = "Sita Ram"
+Student2.Age = 30
+Student2.MarkPrc = 74
 
-const PeopleList = [];
 
-const People1 = {};
-People1.Name = "Prince";
-People1.Age = 16;
+Student3.Name = "Gouri Shanker"
+Student3.Age = 21
+Student3.MarkPrc = 80
 
-const People2 = {};
-People2.Name = "Raja"
-People2.Age = 20;
+StudentList.push(Student1,Student2,Student3);
 
-const People3 = {};
-People3.Name = "Raman Kumar"
-People3.Age = 40;
-
-const People4 = {};
-People4.Name = "Thakur Durjan Singh"
-People4.Age = 70
-
-PeopleList.push(People1 , People2,People3,People4);
-
-console.log(PeopleList);
-
-let PeopleDetails =  getGroupPeople(PeopleList,PeopleList.length)
-console.log(PeopleDetails);
-
+const EligibleStudentsList = CheckEligibility(StudentList,MinMaks)
