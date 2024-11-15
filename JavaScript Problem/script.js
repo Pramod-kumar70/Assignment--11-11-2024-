@@ -1,10 +1,10 @@
 
-// // 1. Conditional Discounts with if-else
-// // Write a function, calculateDiscount(price, customerType), that calculates discounts based on customer type:
+// 1. Conditional Discounts with if-else
+// Write a function, calculateDiscount(price, customerType), that calculates discounts based on customer type:
 
-// // "premium" customers get a 20% discount,
-// // "regular" customers get a 10% discount,
-// // others get a 5% discount. Return the final price after discount. Include an error check for negative prices or invalid customer types.
+// "premium" customers get a 20% discount,
+// "regular" customers get a 10% discount,
+// others get a 5% discount. Return the final price after discount. Include an error check for negative prices or invalid customer types.
 
 
 const calculateDiscount = function(price , customerType){
@@ -191,45 +191,71 @@ console.log(BankAccount1);
 // 6. Student Grades with for loop and switch case
 // Define an array of objects, students, where each student has properties name and score. Write a function assignGrades(students) that assigns each student a grade (A-F) based on their score using a for loop and switch case. Update each student object with a new grade property.
 //Array of student objects
-let students = [
-    { name: "Alice", score: 95 },
-    { name: "Bob", score: 85 },
-    { name: "Charlie", score: 72 },
-    { name: "David", score: 60 },
-    { name: "Eve", score: 40 }
-  ];
-  
-  function assignGrades(students) {
-    for (let i = 0; i < students.length; i++) {
-      let student = students[i];
-      let score = student.score;
-  
-      switch (true) {
-        case (score >= 90):
-          student.grade = 'A';
-          break;
-        case (score >= 80):
-          student.grade = 'B';
-          break;
-        case (score >= 70):
-          student.grade = 'C';
-          break;
-        case (score >= 60):
-          student.grade = 'D';
-          break;
-        case (score >= 50):
-          student.grade = 'E';
-          break;
-        default:
-          student.grade = 'F';
-      }
+
+
+
+const AssignGrade = function(StudentsList){
+
+    let ListSize = StudentsList.length;
+    let Temp = 0
+    for(let i = 0;i<ListSize;i++)
+    {
+        switch(true){
+            case(StudentsList[i].Score>=90) :
+            StudentsList[i].Grade = "A";
+            break;
+
+            case(StudentsList[i].Score>=80) :
+            StudentsList[i].Grade = "B"
+            break;
+
+            case(StudentsList[i].Score>=70) :
+            StudentsList[i].Grade = "C"
+            break;
+
+            case(StudentsList[i].Score>=60) : 
+            StudentsList[i].Grade = "D"
+            break;
+
+            case(StudentsList[i].Score>=50) :
+            StudentsList[i].Grade = "E"
+            break;
+
+            default : StudentsList[i].Grade = "No Grade"
+
+
+        }
     }
-  }
-  
-  assignGrades(students);
-  
-  console.log(students);
-  
+}
+
+ const StudentsList = []
+
+const Student11  = {
+    Name : "Gauri Shankar",
+    Score: 91
+}
+const Student22 = {
+    Name : "Uma Shanker",
+    Score: 74
+}
+const Student33 = {
+    Name : "Sita Ram" , 
+    Score : 60
+}
+const Student44 = {
+    Name : "Radhe Krishna",
+    Score : 40
+
+}
+StudentsList.push(Student11,Student22,Student33,Student44)
+
+AssignGrade(StudentsList)
+console.log(StudentsList);
+
+for(let i=0;i<StudentsList.length;i++)
+    console.log(StudentsList[i]);
+    
+
 
 // 8. Function to Group People by Age
 // Given an array of objects, people, where each object contains name and age, write a function groupByAge(people) that groups people into age categories:
